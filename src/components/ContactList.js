@@ -1,5 +1,4 @@
-import React from 'react';
-import Contact from './Contact';
+import Contact from './Contact'
 
 const users = [
   {
@@ -29,14 +28,8 @@ const users = [
   }
 ]
 
-const ContactList = () => (
-  <div>
-    {users.map(item => (
-      <Contact avatar={item.avatar} name={item.name} status={item.status} />
-    ))}
-  </div>
-)
+const ContactList = () => {
+  return users.map(items => Contact(items))
+}
 
-
-
-export default ContactList;
+export default ContactList
