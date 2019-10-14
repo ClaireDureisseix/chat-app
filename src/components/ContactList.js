@@ -1,3 +1,4 @@
+import React from 'react'
 import Contact from './Contact'
 
 const users = [
@@ -28,8 +29,15 @@ const users = [
   }
 ]
 
-const ContactList = () => {
-  return users.map(items => Contact(items))
-}
+const ContactList = () => (
+  users.map(item => (
+    <Contact
+      key={item.name}
+      name={item.name}
+      avatar={item.avatar}
+      status={item.status}
+    />
+  )) 
+)
 
 export default ContactList
